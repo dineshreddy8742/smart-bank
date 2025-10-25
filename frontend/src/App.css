@@ -1,0 +1,192 @@
+/* Main Background Colors */
+:root {
+  --bg-primary: #f9fafb;        /* Light grayish white - main background */
+  --bg-secondary: #ffffff;       /* Pure white - cards/sections */
+  --bg-accent: #f4f6f8;         /* Subtle gray - alternate sections */
+  
+  /* Text Colors */
+  --text-primary: #212121;       /* Dark gray/black - main text */
+  --text-secondary: #666666;     /* Medium gray - secondary text */
+  --text-light: #999999;         /* Light gray - hints/labels */
+  
+  /* Brand/Accent Colors */
+  --color-primary: #4CAF50;      /* Green - agricultural theme */
+  --color-success: #28a745;      /* Success green */
+  --color-warning: #ffc107;      /* Warning yellow */
+  --color-danger: #dc3545;       /* Danger red */
+  --color-info: #17a2b8;         /* Info blue */
+  
+  /* Border & Shadow */
+  --border-color: #e0e0e0;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+/* Body Styling */
+body {
+  background-color: var(--bg-primary);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+/* Card/Section Styling */
+.card, .section {
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Header/Navbar */
+.header {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+/* Navbar Styling - Adapted to new palette */
+.navbar {
+  background-color: var(--color-primary) !important; /* Use primary color */
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: var(--bg-secondary) !important; /* White text */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+  color: var(--bg-accent) !important; /* Subtle hover effect */
+}
+
+/* Form Control Styling - Adapted to new palette */
+.form-control,
+.form-select {
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25); /* Green shadow */
+}
+
+/* Button Styling - Adapted to new palette */
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #45a049; /* Darker green */
+  border-color: #45a049;
+}
+
+.btn-success {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-success:hover {
+  background-color: #218838; /* Darker success green */
+  border-color: #1e7e34;
+}
+
+.btn-info {
+  background-color: var(--color-info);
+  border-color: var(--color-info);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.btn-info:hover {
+  background-color: #138496; /* Darker info blue */
+  border-color: #117a8b;
+}
+
+.btn-outline-light {
+  color: var(--bg-secondary);
+  border-color: var(--bg-secondary);
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-outline-light:hover {
+  color: var(--color-primary);
+  background-color: var(--bg-secondary);
+  border-color: var(--bg-secondary);
+}
+
+/* Alert Styling - Adapted to new palette */
+.alert {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Table Styling - Adapted to new palette */
+.table {
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  overflow: hidden; /* Ensures rounded corners apply to table */
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.table thead th {
+  background-color: var(--bg-accent);
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--border-color);
+  font-weight: 600;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  .container.mt-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
