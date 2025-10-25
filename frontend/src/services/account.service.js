@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authHeader from './auth-header';
 
-const API_URL = 'http://127.0.0.1:8001';
+const API_URL = 'https://smart-bank-system-2.onrender.com';
 
 const createAccount = (accountType, initialDeposit) => {
   return axios.post(API_URL + '/accounts/', {
